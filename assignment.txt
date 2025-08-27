@@ -1,0 +1,84 @@
+1.
+
+import java.time.ZonedDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+
+public class TimeZonesDemo {
+    public static void main(String[] args) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss z");
+
+        ZonedDateTime gmtTime = ZonedDateTime.now(ZoneId.of("GMT"));
+        System.out.println("Current Time in GMT: " + gmtTime.format(formatter));
+
+        ZonedDateTime istTime = ZonedDateTime.now(ZoneId.of("Asia/Kolkata"));
+        System.out.println("Current Time in IST: " + istTime.format(formatter));
+
+        ZonedDateTime pstTime = ZonedDateTime.now(ZoneId.of("America/Los_Angeles"));
+        System.out.println("Current Time in PST: " + pstTime.format(formatter));
+    }
+}
+
+2.
+
+import java.time.ZonedDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+
+public class TimeZonesDemo {
+    public static void main(String[] args) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss z");
+
+        ZonedDateTime gmtTime = ZonedDateTime.now(ZoneId.of("GMT"));
+        System.out.println("Current Time in GMT: " + gmtTime.format(formatter));
+
+        ZonedDateTime istTime = ZonedDateTime.now(ZoneId.of("Asia/Kolkata"));
+        System.out.println("Current Time in IST: " + istTime.format(formatter));
+
+        ZonedDateTime pstTime = ZonedDateTime.now(ZoneId.of("America/Los_Angeles"));
+        System.out.println("Current Time in PST: " + pstTime.format(formatter));
+    }
+}
+
+3.
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.util.Locale;
+
+public class DateFormats {
+    public static void main(String[] args) {
+        LocalDate today = LocalDate.now();
+
+        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter formatter3 = DateTimeFormatter.ofPattern("EEE, MMM dd, yyyy", Locale.ENGLISH);
+
+        System.out.println(today.format(formatter1));
+        System.out.println(today.format(formatter2));
+        System.out.println(today.format(formatter3));
+    }
+}
+
+
+
+4.
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
+public class DateFormats {
+    public static void main(String[] args) {
+        LocalDate today = LocalDate.now();
+
+        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter formatter3 = DateTimeFormatter.ofPattern("EEE, MMM dd, yyyy", Locale.ENGLISH);
+
+        System.out.println(today.format(formatter1));
+        System.out.println(today.format(formatter2));
+        System.out.println(today.format(formatter3));
+    }
+}
